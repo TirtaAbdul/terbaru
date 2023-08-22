@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManPowerSystem", "ManPowerSystem\ManPowerSystem.csproj", "{86E28960-D042-4156-8C31-272D6A9ECFDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86E28960-D042-4156-8C31-272D6A9ECFDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E28960-D042-4156-8C31-272D6A9ECFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E28960-D042-4156-8C31-272D6A9ECFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E28960-D042-4156-8C31-272D6A9ECFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A24977D-2E60-4126-9496-98DB19283D54}
+	EndGlobalSection
+EndGlobal

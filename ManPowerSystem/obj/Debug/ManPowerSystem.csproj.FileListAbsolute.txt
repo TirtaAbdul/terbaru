@@ -1,0 +1,15 @@
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\ManPowerSystem.exe.config
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\ManPowerSystem.exe
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\ManPowerSystem.pdb
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.csproj.AssemblyReference.cache
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.csproj.SuggestedBindingRedirects.cache
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.LoginForm.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Properties.Resources.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.csproj.GenerateResource.cache
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.csproj.CoreCompileInputs.cache
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.exe
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.pdb
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.mainForm.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Form1.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.Insert_Form.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.AdminFormKW.resources
