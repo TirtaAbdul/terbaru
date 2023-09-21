@@ -26,19 +26,19 @@ namespace ManPowerSystem.Pages
         }
                 public void check()
                 {
-                    if (user.Text != "" && password.Text != "")
+                     if (!string.IsNullOrWhiteSpace(user.Text) && !string.IsNullOrWhiteSpace(password.Text))
                     {
-                        string str = "SELECT username, password, role";
+                        string str = "SELECT username, password, role,section";
                         str = str + " FROM [ProjectHR-02].[dbo].[tbl_login]";
                         str = str + " WHERE username='" + user.Text.Trim() + "' AND password ='" + password.Text.Trim() + "' ";
                         DataSet ds = Function.GetDataSet(str);
                         if (ds.Tables[0].Rows.Count > 0)
                         {
                             DataRow drs = ds.Tables[0].Rows[0];
-                                if (drs["role"] == "A")
+                                if (drs["role"].ToString() == "A")     
                          {
-                            AdminFormKW cn = new AdminFormKW();
-                            cn.stdname = user.Text;
+                            FormSelectMenu cn = new FormSelectMenu();
+                            //cn.stdname = user.Text;
                             //string uid = drs["username"].ToString();
                             //cn.txt_user = uid;
                             //Function.userid = uid.Trim();
@@ -58,9 +58,9 @@ namespace ManPowerSystem.Pages
                     {
                         mainForm cn = new mainForm();
                         cn.stdname = user.Text;
-                        //string uid = drs["username"].ToString();
-                        //cn.txt_user = uid;
-                        //Function.userid = uid.Trim();
+                        string uid = drs["section"].ToString();
+                        cn.lb_user.Text = uid;
+                        Function.userid = uid.Trim();
 
 
                         //cn.pass = user.Text;
@@ -106,6 +106,28 @@ namespace ManPowerSystem.Pages
             user.Text = "";
             password.Text = "";
             user.Focus();
+        }
+
+        private void password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_lg_Click(this, new EventArgs());
+            }
+        }
+
+        private void user_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_lg_Click(this, new EventArgs());
+                user.Text = "";
+            }
+        }
+
+        private void user_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

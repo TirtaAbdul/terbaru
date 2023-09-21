@@ -55,6 +55,7 @@ namespace ManPowerSystem.Classes
             }
         }
 
+
         public static DataSet GetDataSet(string SQL)
         {
             SqlCommand cmd = new SqlCommand(SQL, db_con);
@@ -190,6 +191,61 @@ namespace ManPowerSystem.Classes
                 }
             }
         }
+
+        public static bool EXEcuteQuery2(string SQL, SqlParameter sqlParameter, SqlParameter sqlParameter1)
+        {
+            SqlCommand cmd = new SqlCommand(SQL, db_con);
+            SqlTransaction thisTransaction;
+            thisTransaction = db_con.BeginTransaction();
+            cmd.Transaction = thisTransaction;
+
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                thisTransaction.Commit();
+                app_errorreason = "";
+                return true;
+            }
+            catch (InvalidOperationException ex)
+            {
+                string str;
+                str = "Source : " + ex.Source;
+                str += "_";
+                str += "Exception Message : " + ex.Message;
+                str += "_";
+                str += "Stack Trace : " + ex.StackTrace;
+                app_errorreason = str;
+                MessageBox.Show(str, "Specific Exception");
+                return false;
+            }
+            catch (SqlException ex)
+            {
+                string str;
+                str = "Source : " + ex.Source;
+                str += "Exception Message : " + ex.Message;
+                app_errorreason = str;
+                MessageBox.Show(str, "Database Exception");
+                thisTransaction.Rollback();
+                return false;
+            }
+            catch (Exception ex)
+            {
+                string str;
+                str = "Source : " + ex.Source;
+                str += "Exception Message : " + ex.Message;
+                app_errorreason = str;
+                MessageBox.Show(str, "Generic Exception");
+                return false;
+            }
+            finally
+            {
+                if (db_con.State == ConnectionState.Open)
+                {
+                }
+            }
+        }
+
         public static string EXEScalar(string SQL)
         {
 

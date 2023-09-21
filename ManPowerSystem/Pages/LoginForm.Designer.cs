@@ -42,8 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.TextBox();
             this.user = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbrole = new System.Windows.Forms.ComboBox();
             this.pn_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,8 +51,6 @@
             // pn_login
             // 
             this.pn_login.BackColor = System.Drawing.Color.PowderBlue;
-            this.pn_login.Controls.Add(this.cmbrole);
-            this.pn_login.Controls.Add(this.label5);
             this.pn_login.Controls.Add(this.pictureBox3);
             this.pn_login.Controls.Add(this.pictureBox2);
             this.pn_login.Controls.Add(this.pictureBox1);
@@ -124,7 +120,7 @@
             this.btn_lg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_lg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lg.ForeColor = System.Drawing.Color.White;
-            this.btn_lg.Location = new System.Drawing.Point(119, 378);
+            this.btn_lg.Location = new System.Drawing.Point(101, 323);
             this.btn_lg.Name = "btn_lg";
             this.btn_lg.Size = new System.Drawing.Size(75, 28);
             this.btn_lg.TabIndex = 2;
@@ -139,7 +135,7 @@
             this.btn_rst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_rst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_rst.ForeColor = System.Drawing.Color.White;
-            this.btn_rst.Location = new System.Drawing.Point(215, 378);
+            this.btn_rst.Location = new System.Drawing.Point(232, 323);
             this.btn_rst.Name = "btn_rst";
             this.btn_rst.Size = new System.Drawing.Size(75, 28);
             this.btn_rst.TabIndex = 3;
@@ -162,7 +158,7 @@
             this.lb_wrong.AutoSize = true;
             this.lb_wrong.BackColor = System.Drawing.Color.LightPink;
             this.lb_wrong.ForeColor = System.Drawing.Color.Red;
-            this.lb_wrong.Location = new System.Drawing.Point(116, 350);
+            this.lb_wrong.Location = new System.Drawing.Point(116, 292);
             this.lb_wrong.Name = "lb_wrong";
             this.lb_wrong.Size = new System.Drawing.Size(162, 13);
             this.lb_wrong.TabIndex = 2;
@@ -199,6 +195,7 @@
             this.password.Size = new System.Drawing.Size(235, 25);
             this.password.TabIndex = 1;
             this.password.WordWrap = false;
+            this.password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_KeyDown);
             // 
             // user
             // 
@@ -209,26 +206,8 @@
             this.user.Size = new System.Drawing.Size(235, 25);
             this.user.TabIndex = 0;
             this.user.WordWrap = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(84, 285);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 20);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Role";
-            // 
-            // cmbrole
-            // 
-            this.cmbrole.FormattingEnabled = true;
-            this.cmbrole.Items.AddRange(new object[] {
-            "Admin"});
-            this.cmbrole.Location = new System.Drawing.Point(88, 309);
-            this.cmbrole.Name = "cmbrole";
-            this.cmbrole.Size = new System.Drawing.Size(121, 21);
-            this.cmbrole.TabIndex = 13;
+            this.user.TextChanged += new System.EventHandler(this.user_TextChanged);
+            this.user.KeyDown += new System.Windows.Forms.KeyEventHandler(this.user_KeyDown);
             // 
             // LoginForm
             // 
@@ -237,8 +216,10 @@
             this.ClientSize = new System.Drawing.Size(414, 428);
             this.Controls.Add(this.pn_login);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManPower Login";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -266,7 +247,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.ComboBox cmbrole;
-        private System.Windows.Forms.Label label5;
     }
 }

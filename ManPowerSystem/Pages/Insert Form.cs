@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace ManPowerSystem.Pages
 {
@@ -19,6 +20,11 @@ namespace ManPowerSystem.Pages
         public string stdar { get; set; }
         public string txt_user { get; set; }
         public string HeaderText { get; set; }
+
+        public string Stdid { get; set; }
+        public string Stdsec { get; set; }
+        public string Stdsecname { get; set; }
+        public string Stdgrup { get; set; }
         public Insert_Form()
         {
             InitializeComponent();
@@ -40,7 +46,7 @@ namespace ManPowerSystem.Pages
 
                     Function.EXEcuteQuery(query);
                     MessageBox.Show("Data berhasil ditambahkan");
-                    txtcat2.Text = "";
+                    //txtcat2.Text = "";
                     total2.Text = "";
                 }
                 catch (Exception Ex)
@@ -56,6 +62,10 @@ namespace ManPowerSystem.Pages
             ShowSectionName();
             ShowNoSection();
             ShowGroup();
+            txt_id2.Text = Stdid;
+            txtsec2.Text = Stdsec;
+            txtsecname2.Text = Stdsecname;
+            txtgrup2.Text = Stdgrup;
         }
 
         public void ShowSectionName()
@@ -80,6 +90,19 @@ namespace ManPowerSystem.Pages
         {
             string qr = "SELECT user_id FROM [ProjectHR-02].[dbo].[tbl_login] WHERE username = '" + stdname + "'";
             txt_id2.Text = Function.EXEScalar(qr);
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void total2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
         }
     }
 }

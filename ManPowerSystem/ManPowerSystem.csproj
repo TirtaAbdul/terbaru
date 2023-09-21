@@ -33,8 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=6.2.9.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.2.9\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +78,42 @@
     <Compile Include="Pages\AdminFormKW.Designer.cs">
       <DependentUpon>AdminFormKW.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\InsertAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\InsertAdmin.Designer.cs">
+      <DependentUpon>InsertAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InsertOvertimeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\InsertOvertimeAdmin.Designer.cs">
+      <DependentUpon>InsertOvertimeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MpOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\MpOutForm.Designer.cs">
+      <DependentUpon>MpOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserOvertimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\UserOvertimeForm.Designer.cs">
+      <DependentUpon>UserOvertimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FormSelectMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FormSelectMenu.Designer.cs">
+      <DependentUpon>FormSelectMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InsertOverTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\InsertOverTime.Designer.cs">
+      <DependentUpon>InsertOverTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Insert Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +132,12 @@
     <Compile Include="Pages\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\OverTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\OverTime.Designer.cs">
+      <DependentUpon>OverTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_ProjectHR_02DataSet.Designer.cs">
@@ -93,14 +151,35 @@
     <EmbeddedResource Include="Pages\AdminFormKW.resx">
       <DependentUpon>AdminFormKW.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\InsertAdmin.resx">
+      <DependentUpon>InsertAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\InsertOvertimeAdmin.resx">
+      <DependentUpon>InsertOvertimeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MpOutForm.resx">
+      <DependentUpon>MpOutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserOvertimeForm.resx">
+      <DependentUpon>UserOvertimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FormSelectMenu.resx">
+      <DependentUpon>FormSelectMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\Insert Form.resx">
       <DependentUpon>Insert Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\InsertOverTime.resx">
+      <DependentUpon>InsertOverTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\OverTime.resx">
+      <DependentUpon>OverTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,8 +191,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Settings.Designer.cs">
@@ -156,6 +236,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\overtime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-care.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\work %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

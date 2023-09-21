@@ -13,3 +13,17 @@ D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.mainFor
 D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Form1.resources
 D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.Insert_Form.resources
 D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.AdminFormKW.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.OverTimeForm.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.FormSelectMenu.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.OverTime.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.InsertOverTime.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.InsertAdmin.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.InsertOvertimeAdmin.resources
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\EPPlus.dll
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\EPPlus.Interfaces.dll
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\EPPlus.System.Drawing.dll
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\EPPlus.xml
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.csproj.CopyComplete
+D:\Tirta\C#\ManPowerSystem\ManPowerSystem\obj\Debug\ManPowerSystem.Pages.MpOutForm.resources
